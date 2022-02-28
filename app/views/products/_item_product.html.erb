@@ -19,12 +19,24 @@
           </p>
 
           <button class="add-cart" id="add-btn_<%=product.id%>">
-            <%= link_to "ADD TO CARD", add_cart_product_path(product), method: :post, remote: true %>
+              <%= link_to "ADD TO CARD", add_cart_product_path(product), method: :post, remote: true %>
           </button>
 
           <div class="check-item" id="check-btn_<%=product.id%>" style="display: none">
-            <%= image_tag "check.png", class: "pcheck"%>
+              <%= image_tag "check.png", class: "pcheck"%>
           </div>
+          
+          <!-- <%if @carts.empty?%>
+            <button class="add-cart" id="add-btn_<%=product.id%>">
+              <%= link_to "ADD TO CARD", add_cart_product_path(product), method: :post, remote: true %>
+            </button>
+          <%end%>
+
+          <%if !@carts.empty?%>
+            <div class="check-item" id="check-btn_<%=product.id%>" style="display: none">
+              <%= image_tag "check.png", class: "pcheck"%>
+            </div>
+          <%end%> -->
 
         </div>
       </div>  

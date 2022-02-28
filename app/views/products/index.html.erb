@@ -56,11 +56,13 @@
     <div class="content"></div>
       <div class="list-cart" id="list_carts">
         <% @carts.each do |cart| %>
-          <%= render partial: 'products/item_cart', locals: {product: cart} %>
+          <%= render partial: 'products/item_cart', locals: {productC: cart} %>
         <% end %>
-    
-        <p class="descriptions" id="emptyNoti">Your cart is empty</p>
 
+        <%if @carts.empty?%>
+          <p class="descriptions" id="emptyNoti">Your cart is empty</p>
+        <%end%>
+        
       </div>
   </div>
 </div>

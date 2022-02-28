@@ -3,7 +3,7 @@ $('#emptyNoti').hide();
   $('#add-btn_<%=@product.id%>').hide()
   $('#check-btn_<%=@product.id%>').show()
   $('#list_carts').append(
-    "<%= escape_javascript(render(partial: 'item_cart', locals: { product: @product })) %>"
+    "<%= escape_javascript(render(partial: 'item_cart', locals: {productC: @product})) %>"
   );
 <%else%>
   $("#item_quality_<%= @product.id %>").html("<%=@cart.quality%>");

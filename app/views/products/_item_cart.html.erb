@@ -1,29 +1,29 @@
- <div class="cart-item" id="cart_item_id_<%=product.id%>">
+ <div class="cart-item" id="cart_item_id_<%=productC.id%>">
   <div class="cart-container">
     <div class="cart-image">
-      <div class="image-background" style="background-color:<%=product.color%>"> 
-        <%= image_tag product.image, class: "cimg"%>
+      <div class="image-background" style="background-color:<%=productC.color%>"> 
+        <%= image_tag productC.image, class: "cimg"%>
       </div> 
     </div>
     <div class="cart-content">
       <p class="cart-name">
-        <%= product.name%>
+        <%= productC.name%>
       </p>
       <p class="cart-price">
-        <%= number_to_currency(product.price) %>
+        <%= number_to_currency(productC.price) %>
       </p>
       <div class="cart-actions">
         <div class="cart-edit">
 
-          <%= link_to remove_cart_product_path(product), method: :post, remote: true do %>
+          <%= link_to remove_cart_product_path(productC), method: :post, remote: true do %>
             <button class="cart-btn" >
               <%= image_tag "minus.png", class: "aimg"%>
             </button>
           <% end %>
       
-          <p class="cart-amout" style="margin-right: 10px;" id="item_quality_<%=product.id%>"><%= product.cart.quality%></p>
+          <p class="cart-amout" style="margin-right: 10px;" id="item_quality_<%=productC.id%>"><%= productC.cart.quality%></p>
 
-          <%= link_to add_cart_product_path(product), method: :post, remote: true do %>
+          <%= link_to add_cart_product_path(productC), method: :post, remote: true do %>
             <button class="cart-btn">
               <%= image_tag "plus.png", class: "aimg"%>
             </button>
@@ -31,7 +31,7 @@
           
         </div>
 
-        <%= link_to delete_cart_product_path(product), method: :post, remote: true do %>
+        <%= link_to delete_cart_product_path(productC), method: :post, remote: true do %>
           <button class="dele-btn" style="background-color: #f6c90e">
             <%= image_tag "trash.png", class: "timg"%>
           </button>
