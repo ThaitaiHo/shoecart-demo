@@ -67,7 +67,7 @@ body {
 
 .list-items {
     overflow-y: scroll;
-    height: calc(100% - 98px);
+    height: calc(110% - 98px);
 }
 
 .list-items::-webkit-scrollbar {
