@@ -66,6 +66,7 @@ body {
 }
 
 .list-items {
+    overflow-x: hidden;
     overflow-y: scroll;
     height: calc(102% - 98px);
 }
