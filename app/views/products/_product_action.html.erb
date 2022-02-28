@@ -1,10 +1,10 @@
           
-          <%if !product.cart.present? %>
-            <button class="add-cart" id="add-btn_<%=product.id%>">
-            <%= link_to "ADD TO CARD", add_cart_product_path(product), method: :post, remote: true %>
-            </button>
-          <% else %>
-            <div class="check-item" id="check-btn_<%=product.id%>">
-                <%= image_tag "check.png", class: "pcheck"%>
-            </div>
-          <%end%>
+<%if !product.cart.present? %>
+  <button class="add-cart" id="add-btn_<%=product.id%>">
+  <%= link_to "ADD TO CARD", add_cart_product_path(product), method: :post, remote: true %>
+  </button>
+<% else %>
+  <div class="check-item" id="check-btn_<%=product.id%>">
+      <%= image_tag "check.png", class: "pcheck"%>
+  </div>
+<%end%>
