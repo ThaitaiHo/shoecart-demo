@@ -9,5 +9,4 @@ $('#total_price_cart').html("<%= number_to_currency(@total_price)%>")
 <%end%>
 <%if @current_cart.empty? %>
   $('#emptyNoti').show();
-
 <%end%>
