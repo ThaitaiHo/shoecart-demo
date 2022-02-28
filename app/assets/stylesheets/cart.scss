@@ -1,0 +1,128 @@
+.list-cart{
+  overflow: hidden;
+  position: relative;
+  overflow-y: scroll;
+  height: calc(100% - 98px);
+  margin-top: 25px;
+
+  .cart-item{
+    margin-bottom: 20px;
+    display: block;
+
+    .cart-container{
+      display: flex;
+    
+      .cart-image{
+        
+        .image-background{
+          width: 90px;
+          height: 90px;
+          border-radius: 100%;
+          background-color: #eee;
+          margin-right: 34px;
+      
+          .cimg{
+            display: block;
+            width: 140%;
+            transform: rotate(-28deg) translateY(-40px);
+            filter: drop-shadow(0 30px 20px rgba(0,0,0,.2));
+          }
+        }
+      }
+
+      .cart-content{
+        width: 190px;
+
+        .cart-name {
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 1.5;
+          margin-bottom: 10px;
+        }
+
+        .cart-price{
+          font-size: 20px;
+          font-weight: 700;
+          margin-bottom: 16px;
+        }
+
+        .cart-actions{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          
+          .cart-edit{
+            display: flex;
+            display: flex;
+            align-items: center;
+            justify-content:space-between;
+
+            .cart-btn{
+              width: 30px;
+              height: 30px;
+              border: none;
+              cursor: pointer;
+              line-height: 28px;
+              border-radius: 100%;
+              background-color: #eee;
+              font-size: 16px;
+              font-weight: 700;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              transition: .2s;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
+              margin-right: 10px;
+
+                .aimg{
+                  width: 8px;
+                  height: 8px;
+                } 
+            }
+
+          }
+
+          .dele-btn{
+            width: 30px;
+              height: 30px;
+              border: none;
+              cursor: pointer;
+              line-height: 28px;
+              border-radius: 100%;
+              background-color: #eee;
+              font-size: 16px;
+              font-weight: 700;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              transition: .2s;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
+
+            .timg{
+              width: 17px;
+              height: 17px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.list-cart::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+
+
+
+
+
+
+

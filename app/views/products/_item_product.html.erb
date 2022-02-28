@@ -1,0 +1,34 @@
+
+          
+<div class="item">
+  <% @products.each do |product| %>
+    <div class="item-body">
+      <div class="prodimg" style="background-color:<%=product.color%>">
+        <%= image_tag product.image, class: "pimg"%>
+      </div>
+      <div class="proddes">
+        <p class="name">
+          <%= product.name%>
+        </p>
+        <p class="descriptions">
+          <%= product.description%>
+        </p>
+        <div class="acct">
+          <p class="price">
+            $<%=product.price%>
+          </p>
+
+          <button class="add-cart" id="add-btn_<%=product.id%>">
+            <%= link_to "ADD TO CARD", add_cart_product_path(product), method: :post, remote: true %>
+          </button>
+
+          <div class="check-item" id="check-btn_<%=product.id%>" style="display: none">
+            <%= image_tag "check.png", class: "pcheck"%>
+          </div>
+
+        </div>
+      </div>  
+    </div>
+  <%end%>
+</div>
+

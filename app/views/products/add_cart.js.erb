@@ -1,0 +1,11 @@
+$('#emptyNoti').hide();
+<%if @cart.quality == 1 %>
+  $('#add-btn_<%=@product.id%>').hide()
+  $('#check-btn_<%=@product.id%>').show()
+  $('#list_carts').append(
+    "<%= escape_javascript(render(partial: 'item_cart', locals: { product: @product })) %>"
+  );
+<%else%>
+  $("#item_quality_<%= @product.id %>").html("<%=@cart.quality%>");
+<%end%>
+$('#total_price_cart').html("<%= number_to_currency(@total_price)%>")

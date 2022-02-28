@@ -1,0 +1,161 @@
+body {
+    color: #303841;
+    font-family: 'Rubik', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.container:before {
+    content: "";
+    display: block;
+    position: fixed;
+    width: 300%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    border-radius: 100%;
+    transform: translateX(-50%) skewY(-8deg);
+    background-color: #f6c90e;
+    z-index: -1;
+    animation: wave 8s ease-in-out infinite alternate;
+}
+
+.list{
+    margin: 18px;
+    background-color: #fff;
+    width: 306px;
+    height: 600px;
+    border-radius: 35px;
+    padding: 17px 28px 0px;
+    box-shadow: 0 3.2px 2.2px rgba(0,0,0,.02), 0 7px 5.4px rgba(0,0,0,.028), 0 12.1px 10.1px rgba(0,0,0,.035), 0 19.8px 18.1px rgba(0,0,0,.042), 0 34.7px 33.8px rgba(0,0,0,.05), 0 81px 81px rgba(0,0,0,.07);
+    overflow: hidden;
+    position: relative;
+}
+
+.list:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    background-color: #f6c90e;
+    top: -20%;
+    left: -50%;
+    z-index: 0;
+}
+
+.header {
+    height: 15%;
+}
+
+.nikeico {
+    width: 50px;
+    position: relative;
+}
+
+.cart-title{
+    font-size: 24px;
+    font-weight: 700;
+    margin: 16px 0;
+    position: relative;
+}
+
+.list-items {
+    overflow-y: scroll;
+    height: calc(100% - 98px);
+}
+
+.list-items::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
+.acct {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.item {
+    width: 100%;
+    position: relative;
+    height: 491px;
+    margin-bottom: 150px;
+    padding: 40px 0;
+}
+
+
+.prodimg {
+    width: 100%;
+    height: 350px;
+    background-color: rgb(225, 231, 237);
+    border-radius: 35px;
+}
+
+.pimg{
+    width: 300px;
+    transform: rotate(-30deg);
+
+    -webkit-filter: drop-shadow(5px 5px 5px #222 );
+    filter: drop-shadow(15px 25px 25px rgb(54, 53, 53));
+}
+
+.name {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.descriptions {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.8;
+}
+
+.title{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.add-cart {
+    background-color: #f6c90e;
+    font-weight: 700;
+    font-size: 14px;
+    width: auto;
+    height: 46px;
+    padding: 16px 20px;
+    border-radius: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: none;
+}
+
+.check-item{
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: #f6c90e;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.pcheck{
+    width: 25px;
+    height: 25px;
+}
