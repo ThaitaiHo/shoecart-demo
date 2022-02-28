@@ -17,13 +17,10 @@
           <p class="price">
             $<%=product.price%>
           </p>
+          
 
-          <button class="add-cart" id="add-btn_<%=product.id%>">
-              <%= link_to "ADD TO CARD", add_cart_product_path(product), method: :post, remote: true %>
-          </button>
-
-          <div class="check-item" id="check-btn_<%=product.id%>" style="display: none">
-              <%= image_tag "check.png", class: "pcheck"%>
+          <div id="product_action_<%=product.id%>">
+            <%= render partial: 'products/product_action', locals: {product: product}%>
           </div>
           
           <!-- <%if @carts.empty?%>

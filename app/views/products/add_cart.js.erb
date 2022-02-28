@@ -1,7 +1,9 @@
 $('#emptyNoti').hide();
+$("#product_action_<%= @product.id%>").html(
+   "<%= escape_javascript(render(partial: 'product_action', locals: {product: @product})) %>"
+  )
 <%if @cart.quality == 1 %>
-  $('#add-btn_<%=@product.id%>').hide()
-  $('#check-btn_<%=@product.id%>').show()
+
   $('#list_carts').append(
     "<%= escape_javascript(render(partial: 'item_cart', locals: {productC: @product})) %>"
   );
