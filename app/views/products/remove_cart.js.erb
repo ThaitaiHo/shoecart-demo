@@ -1,14 +1,13 @@
 $('#total_price_cart').html("<%= number_to_currency(@total_price)%>")
 <%if @cart.nil? %>
   $("#cart_item_id_<%= @product.id%>").remove();
-  $('#check-btn_<%=@product.id%>').hide()
-  $('#add-btn_<%=@product.id%>').show();
+  $("#product_action_<%= @product.id%>").html(
+   "<%= escape_javascript(render(partial: 'product_action', locals: {product: @product.reload})) %>"
+  )
 <%else%>
   $('#item_quality_<%=@product.id%>').html("<%= @cart.quality%>")
 <%end%>
 <%if @current_cart.empty? %>
   $('#emptyNoti').show();
-  $("#product_action_<%= @product.id%>").html(
-   "<%= escape_javascript(render(partial: 'product_action', locals: {product: @product.reload})) %>"
-  )
+
 <%end%>
