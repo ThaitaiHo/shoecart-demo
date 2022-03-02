@@ -55,6 +55,10 @@ class ProductsController < ApplicationController
     @current_cart = Cart.all
   end
 
+  def show_all
+    @products = Product.all
+  end
+
   # GET /products/1 or /products/1.json
   def show
   end

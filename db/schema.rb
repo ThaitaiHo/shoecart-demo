@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2022_02_27_090016) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "carts", force: :cascade do |t|
     t.integer "product_id"
     t.integer "quality"
