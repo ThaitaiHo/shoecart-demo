@@ -8,4 +8,4 @@ application up and running.
 * ...
 
 Heroku: https://shoe-cart.herokuapp.com/products
-* heroku run rake db:seed
+* Data: heroku run rake db:seed
